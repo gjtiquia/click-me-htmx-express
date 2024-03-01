@@ -4,12 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <title>Click Me - HTMX & Express</title>
 </head>
 
 <body>
-    <h1>This is a heading</h1>
-    <p>This is a paragraph</p>
+    <h1>Click Me</h1>
+    <h2>HTMX & Express Demo</h2>
+
+    <p>
+        Count:
+        <span id="count" hx-get="/get-counter" hx-trigger="load">
+            0
+        </span>
+    </p>
+
+    <button hx-post="/clicked" hx-target="#count">
+        Click Me
+    </button>
 </body>
 
 </html>
