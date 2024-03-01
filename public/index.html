@@ -14,14 +14,19 @@
 
     <p>
         Count:
-        <span id="count" hx-get="/get-counter" hx-trigger="load">
+        <span id="count" hx-get="/get-counter" hx-trigger="load" hx-indicator="#count-indicator">
             0
         </span>
+        <span id="count-indicator" class="htmx-indicator">Loading</span>
     </p>
 
-    <button hx-post="/clicked" hx-target="#count">
-        Click Me
-    </button>
+    <div>
+        <button hx-post="/clicked" hx-target="#count" hx-indicator="#button-indicator,#count-indicator"
+            hx-disabled-elt="this">
+            Click Me
+        </button>
+        <span id="button-indicator" class="htmx-indicator">Loading</span>
+    </div>
 </body>
 
 </html>
