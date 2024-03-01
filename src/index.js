@@ -1,8 +1,11 @@
-const express = require('express')
+import express from 'express'
+
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
+app.use(express.static("public"))
+
+app.get('/page', (req, res) => {
     res.send('Hello World!')
 })
 

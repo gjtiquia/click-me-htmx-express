@@ -1,13 +1,18 @@
 {
   "name": "click-me-htmx-express",
   "version": "1.0.0",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "author": "gjtiquia",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
